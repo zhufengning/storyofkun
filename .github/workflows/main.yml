@@ -37,7 +37,7 @@ jobs:
           git config --local user.name "ink bot"
           git add 鲲酱的故事.js
           git commit -m 'build js'
-              - name: Push changes
+          
       - name: GitHub Push
         uses: ad-m/github-push-action@v0.6.0
 
