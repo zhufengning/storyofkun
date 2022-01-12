@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,4 +31,12 @@ jobs:
       - name: compile
         run: |
           ./inklecate -o 鲲酱的故事.js 鲲酱的故事.ink 
-          ls
+      - name: git
+        run: |
+          git config --local user.email "rennhaihao@outlook.com"
+          git config --local user.name "ink bot"
+          git add 鲲酱的故事.js
+          git commit -m 'build js'
+              - name: Push changes
+      - name: push
+          uses: ad-m/github-push-action@master
