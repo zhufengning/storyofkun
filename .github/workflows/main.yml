@@ -23,7 +23,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: ink pub
-        uses: zhufengning/ink_pub@0.1.1
+        uses: zhufengning/ink_pub@main
         with:
           input_file: "鲲酱的故事.ink"
           out_file: "鲲酱的故事.js"
