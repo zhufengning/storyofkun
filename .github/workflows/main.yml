@@ -27,3 +27,4 @@ jobs:
         with:
           input_file: "鲲酱的故事.ink"
           out_file: "鲲酱的故事.js"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
