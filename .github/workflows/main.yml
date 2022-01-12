@@ -30,7 +30,9 @@ jobs:
           unzip inklecate_linux.zip
       - name: compile
         run: |
-          ./inklecate -o 鲲酱的故事.js 鲲酱的故事.ink 
+          ./inklecate -o tmp.js 鲲酱的故事.ink 
+          echo "var storyContent = " >> 鲲酱的故事.js
+          car tmp.js >> 鲲酱的故事.js
       - name: git
         run: |
           git config --local user.email "rennhaihao@outlook.com"
