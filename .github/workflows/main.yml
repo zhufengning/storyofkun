@@ -38,5 +38,6 @@ jobs:
           git add 鲲酱的故事.js
           git commit -m 'build js'
               - name: Push changes
-      - name: push
-          uses: ad-m/github-push-action@master
+      - name: GitHub Push
+        uses: ad-m/github-push-action@v0.6.0
+
